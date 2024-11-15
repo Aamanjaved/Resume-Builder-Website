@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            
+            <label for="address">Address</label>
+            <textarea id="address" placeholder="Enter your address"></textarea>
+            
+            <h2>Career Objective</h2>
+            <textarea id="objective" placeholder="Enter your career objective"></textarea>
+            
+            <h2>Education</h2>
+            <div id="education-container">
+                <div class="education-block">
+                    <input type="text" class="degree" placeholder="Degree">
+                    <input type="text" class="institution" placeholder="Institution">
+                    <input type="text" class="completion-year" placeholder="Year of Completion">
+                    <input type="text" class="grade" placeholder="Grade/Percentage">
+                </div>
+            </div>
+            <button type="button" id="add-education">Add Education</button>
+
+            <h2>Work Experience</h2>
+            <div id="experience-container">
+                <div class="experience-block">
+                    <input type="text" class="job-title" placeholder="Job Title">
+                    <input type="text" class="company-name" placeholder="Company Name">
+                    <input type="text" class="duration" placeholder="Duration">
+                    <textarea class="job-description" placeholder="Job Description"></textarea>
+                </div>
+            </div>
+            <button type="button" id="add-experience">Add Work Experience</button>
+
+            <h2>Skills</h2>
+            <textarea id="skills" placeholder="List your skills separated by commas"></textarea>
+            
+            <h2>Additional Sections (Optional)</h2>
+            <textarea id="hobbies" placeholder="Hobbies"></textarea>
+            <textarea id="languages" placeholder="Languages"></textarea>
+            
+            <div class="form-actions">
+                <button type="button" id="create-resume">Create Resume</button>
+                <button type="reset">Clear Form</button>
+            </div>
+        </form>
+        
+        <div id="resume-output" class="hidden">
+            <h1>Your Resume</h1>
+            <div id="resume-content"></div>
+            <button id="print-resume">Print Resume</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
